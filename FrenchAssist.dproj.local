@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012.04.12 12:09:40.011.pas,C:\Users\tralchonok\Documents\RAD Studio\Projects\Unit1.pas=D:\Dropbox\Work\FrenchAssist2\Main.pas</Transaction>
+    <Transaction>2012.04.12 12:09:40.011.dfm,C:\Users\tralchonok\Documents\RAD Studio\Projects\Unit1.dfm=D:\Dropbox\Work\FrenchAssist2\Main.dfm</Transaction>
+    <Transaction>2012.04.12 12:09:45.447.dproj,C:\Users\tralchonok\Documents\RAD Studio\Projects\Project1.dproj=D:\Dropbox\Work\FrenchAssist2\FrenchAssist.dproj</Transaction>
+    <Transaction>2012.04.12 13:48:35.275.pas,D:\Dropbox\Work\FrenchAssist2\ABOUT.pas=D:\Dropbox\Work\FrenchAssist2\AboutBx.pas</Transaction>
+    <Transaction>2012.04.12 13:48:35.275.dfm,D:\Dropbox\Work\FrenchAssist2\ABOUT.dfm=D:\Dropbox\Work\FrenchAssist2\AboutBx.dfm</Transaction>
+    <Transaction>2012.04.12 16:43:04.167.pas,D:\Dropbox\Work\FrenchAssist2\Unit2.pas=D:\Dropbox\Work\FrenchAssist2\frmSettings.pas</Transaction>
+    <Transaction>2012.04.12 16:43:04.167.dfm,D:\Dropbox\Work\FrenchAssist2\Unit2.dfm=D:\Dropbox\Work\FrenchAssist2\frmSettings.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
