@@ -15,6 +15,7 @@ type
     Label1: TLabel;
     Image1: TImage;
     Label2: TLabel;
+    License: TLabel;
     procedure Label1Click(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);

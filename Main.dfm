@@ -111,7 +111,7 @@ object Form1: TForm1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
-    Font.Name = 'Verdana'
+    Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
     OnClick = SpeedButton5Click

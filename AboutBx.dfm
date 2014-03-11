@@ -3,8 +3,8 @@ object AboutBox: TAboutBox
   Top = 108
   BorderStyle = bsDialog
   Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
-  ClientHeight = 168
-  ClientWidth = 298
+  ClientHeight = 201
+  ClientWidth = 337
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -56,8 +56,8 @@ object AboutBox: TAboutBox
   object Panel1: TPanel
     Left = 9
     Top = 8
-    Width = 281
-    Height = 121
+    Width = 320
+    Height = 154
     BevelInner = bvRaised
     BevelOuter = bvLowered
     ParentColor = True
@@ -90,7 +90,7 @@ object AboutBox: TAboutBox
     end
     object Label1: TLabel
       Left = 8
-      Top = 93
+      Top = 117
       Width = 18
       Height = 13
       Cursor = crHandPoint
@@ -153,14 +153,21 @@ object AboutBox: TAboutBox
     object Label2: TLabel
       Left = 8
       Top = 55
-      Width = 257
+      Width = 204
       Height = 13
       Caption = #1057#1086#1079#1076#1072#1085#1086' '#1074' Embarcadero RAD Studio 2010'
     end
+    object License: TLabel
+      Left = 8
+      Top = 98
+      Width = 37
+      Height = 13
+      Caption = 'License'
+    end
   end
   object OKButton: TButton
-    Left = 111
-    Top = 135
+    Left = 127
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'OK'
