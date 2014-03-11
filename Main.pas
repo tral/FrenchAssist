@@ -149,8 +149,8 @@ var
   IsHideAfterInsert : Boolean;
 
   const
-  AppVersion = '1.1.6';
-  AppName = 'FrenchAssist';
+  AppVersion = '1.1.7';
+  AppName = 'French_Assist';
   AppDesc = 'программа для вставки французских символов';
   UpdatePath = 'http://hb.perm.ru/french/newversioncheck.php';
   ProgramSite = 'http://hb.perm.ru/french/frenchassist/index.php';
@@ -720,15 +720,15 @@ end;
 procedure TForm1.cm_winautoloadClick(Sender: TObject);
 begin
 
-  if (length(MyRegReadString(HKEY_LOCAL_MACHINE, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName)) > 0)
+  if (length(MyRegReadString(HKEY_CURRENT_USER, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName)) > 0)
   then
   begin
-    MyRegDelete(HKEY_LOCAL_MACHINE, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName);
+    MyRegDelete(HKEY_CURRENT_USER, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName);
     cm_winautoload.Checked := false;
   end
   else
     begin
-      MyRegWriteString(HKEY_LOCAL_MACHINE, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName, Application.ExeName);
+      MyRegWriteString(HKEY_CURRENT_USER, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName, Application.ExeName);
       cm_winautoload.Checked := true;
     end;
 
@@ -788,11 +788,11 @@ begin
        MyRegWriteString(HKEY_CURRENT_USER, '\Software\' + AppName, 'NotFirstLaunch', 'Yes');
        MyRegWriteString(HKEY_CURRENT_USER, '\Software\' + AppName, 'AutoUpdates', 'Yes');
        Reg_WriteDateTime(HKEY_CURRENT_USER, '\Software\' + AppName, 'LastUpdate', Now());
-       MyRegWriteString(HKEY_LOCAL_MACHINE, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName, Application.ExeName);
+       MyRegWriteString(HKEY_CURRENT_USER, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName, Application.ExeName);
     end;
 
   // Проверяем настройку автозапуска
-  if (length(MyRegReadString(HKEY_LOCAL_MACHINE, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName)) > 0)
+  if (length(MyRegReadString(HKEY_CURRENT_USER, '\Software\Microsoft\Windows\CurrentVersion\Run', AppName)) > 0)
     then cm_winautoload.Checked := true
     else cm_winautoload.Checked := false;
 
