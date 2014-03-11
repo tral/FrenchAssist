@@ -14,7 +14,6 @@ type
     cm_winautoload: TMenuItem;
     cm_quit: TMenuItem;
     N2: TMenuItem;
-    cm_help: TMenuItem;
     cm_about: TMenuItem;
     N5: TMenuItem;
     cm_settings: TMenuItem;
@@ -61,7 +60,6 @@ type
     N1: TMenuItem;
     IdHTTP1: TIdHTTP;
     cm_checkupdates: TMenuItem;
-    N4: TMenuItem;
     ChUpdTimer: TTimer;
     updlabel: TLabel;
     Label7: TLabel;

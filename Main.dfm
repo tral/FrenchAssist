@@ -606,6 +606,9 @@ object Form1: TForm1
       ShortCut = 32858
       OnClick = N1Click
     end
+    object N5: TMenuItem
+      Caption = '-'
+    end
     object cm_winautoload: TMenuItem
       Caption = #1040#1074#1090#1086#1084#1072#1090#1080#1095#1077#1089#1082#1080' '#1079#1072#1087#1091#1089#1082#1072#1090#1100' '#1089' Windows'
       OnClick = cm_winautoloadClick
@@ -614,26 +617,16 @@ object Form1: TForm1
       Caption = #1055#1088#1086#1074#1077#1088#1103#1090#1100' '#1085#1072#1083#1080#1095#1080#1077' '#1086#1073#1085#1086#1074#1083#1077#1085#1080#1081
       OnClick = cm_checkupdatesClick
     end
-    object N4: TMenuItem
-      Caption = '-'
-    end
     object cm_settings: TMenuItem
       Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080'...'
       OnClick = cm_settingsClick
     end
-    object N5: TMenuItem
+    object N2: TMenuItem
       Caption = '-'
-    end
-    object cm_help: TMenuItem
-      Caption = #1055#1086#1084#1086#1097#1100'...'
-      Enabled = False
     end
     object cm_about: TMenuItem
       Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077'...'
       OnClick = cm_aboutClick
-    end
-    object N2: TMenuItem
-      Caption = '-'
     end
     object cm_quit: TMenuItem
       Caption = #1042#1099#1093#1086#1076
