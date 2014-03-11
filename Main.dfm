@@ -55,7 +55,7 @@ object Form1: TForm1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = []
     ParentFont = False
     OnClick = SpeedButton1Click
@@ -69,7 +69,7 @@ object Form1: TForm1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = []
     ParentFont = False
     OnClick = SpeedButton2Click
@@ -83,7 +83,7 @@ object Form1: TForm1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = []
     ParentFont = False
     OnClick = SpeedButton3Click
@@ -111,7 +111,7 @@ object Form1: TForm1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = []
     ParentFont = False
     OnClick = SpeedButton5Click
