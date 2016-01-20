@@ -150,7 +150,7 @@ var
   IsHideAfterInsert: boolean;
 
 const
-  AppVersion = '1.1.7';
+  AppVersion = '1.2.0';
   AppName = 'French_Assist';
   AppDesc = 'программа для вставки французских символов';
   UpdatePath = 'http://hb.perm.ru/french/newversioncheck.php';
@@ -343,7 +343,8 @@ begin
 
   with nid do
   begin
-    cbSize := SizeOf(TNotifyIconData);
+
+    cbSize :=   TNotifyIconData.SizeOf(); //SizeOf(TNotifyIconData);
     Wnd := Form1.Handle;
     uID := 1;
     uFlags := NIF_ICON or NIF_MESSAGE or NIF_TIP;
@@ -401,7 +402,7 @@ begin
   with nid do // Указываем параметры иконки, для чего используем структуру
   // TNotifyIconData.
   begin
-    cbSize := SizeOf(TNotifyIconData); // Размер все структуры
+    cbSize :=   TNotifyIconData.SizeOf();//SizeOf(TNotifyIconData); // Размер все структуры
     Wnd := Form1.Handle; // Здесь мы указывает Handle нашей главной формы
     // которая будет получать сообщения от иконки.
     uID := 1; // Идентификатор иконки
@@ -453,20 +454,22 @@ begin
     Form1.Hide;
 
   if Key = VK_RIGHT then
-    if ((Shape1.Left < 370) or (Shape1.Top > 195) and (Shape1.Left < 420)) then
-      Shape1.Left := Shape1.Left + 52;
+    if ((Shape1.Left < SpeedButton20.Left) or (Shape1.Top > SpeedButton25.Top) and (Shape1.Left < SpeedButton32.Left)) then
+      Shape1.Left := Shape1.Left + SpeedButton3.Left - SpeedButton5.Left;
 
   if Key = VK_LEFT then
-    if Shape1.Left > 10 then
-      Shape1.Left := Shape1.Left - 52;
+    if Shape1.Left > SpeedButton5.Left then
+      Shape1.Left := Shape1.Left - SpeedButton3.Left + SpeedButton5.Left;
 
-  if Key = VK_DOWN then
-    if Shape1.Top < 195 then
-      Shape1.Top := Shape1.Top + 65;
+      if Key = VK_DOWN then
+      begin
+      if Shape1.Top < SpeedButton22.Top then
+          Shape1.Top := Shape1.Top + SpeedButton6.Top - SpeedButton5.Top;
+      end;
 
   if Key = VK_UP then
-    if Shape1.Top > 10 then
-      Shape1.Top := Shape1.Top - 65;
+    if (Shape1.Top > SpeedButton5.Top) and (Shape1.Left < SpeedButton32.Left) then
+      Shape1.Top := Shape1.Top - SpeedButton6.Top + SpeedButton5.Top;
 
   if Key = VK_RETURN then
   begin

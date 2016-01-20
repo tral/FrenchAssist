@@ -153,9 +153,9 @@ object AboutBox: TAboutBox
     object Label2: TLabel
       Left = 8
       Top = 55
-      Width = 204
+      Width = 202
       Height = 13
-      Caption = #1057#1086#1079#1076#1072#1085#1086' '#1074' Embarcadero RAD Studio 2010'
+      Caption = #1057#1086#1079#1076#1072#1085#1086' '#1074' Embarcadero Delphi 10 Seattle'
     end
     object License: TLabel
       Left = 8

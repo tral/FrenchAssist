@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ColorGrd, StdCtrls, TeCanvas, ActnColorMaps, ActnMan, ExtCtrls, Registry,
+  Dialogs, ColorGrd, StdCtrls,  ActnColorMaps, ActnMan, ExtCtrls, Registry,
   Buttons, ComCtrls;
 
 type
   TfSettings = class(TForm)
-    ButtonColor1: TButtonColor;
+    //ButtonColor1: TButtonColor;
     Button1: TButton;
     Button2: TButton;
     SpeedButton1: TSpeedButton;
     HotKey0: THotKey;
     Label1: TLabel;
     hfrmToggle: TCheckBox;
+    ColorDialog1: TColorDialog;
+    Button3: TButton;
     procedure FormShow(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +46,7 @@ begin
 
   Reg.RootKey:=HKEY_CURRENT_USER;
   Reg.OpenKey('\Software\'+Form1.GetAppName,True);
-  Reg.WriteString('WindowColor', IntToStr(ButtonColor1.SymbolColor));
+  Reg.WriteString('WindowColor', IntToStr(ColorDialog1.Color));
 
   if (hfrmToggle.Checked)
   then b := 'yes'
@@ -67,6 +70,11 @@ begin
   fSettings.Close;
 end;
 
+procedure TfSettings.Button3Click(Sender: TObject);
+begin
+ColorDialog1.Execute();
+end;
+
 procedure TfSettings.FormShow(Sender: TObject);
  var Reg: TRegistry;
 begin
@@ -74,13 +82,13 @@ begin
   Reg.RootKey:=HKEY_CURRENT_USER;
   Reg.OpenKey('\Software\'+Form1.GetAppName,True);
 
-  if (length(Reg.ReadString('WindowColor')) > 0)
+  {if (length(Reg.ReadString('WindowColor')) > 0)
   then ButtonColor1.SymbolColor:=StrToInt(Reg.ReadString('WindowColor'))
   else
   begin
     Reg.WriteString('WindowColor', IntToStr(15780518));
     ButtonColor1.SymbolColor := 15780518;
-  end;
+  end;   }
 
     if (length(Reg.ReadString('FrmHideToggle')) > 0)
   then
