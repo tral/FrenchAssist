@@ -150,7 +150,7 @@ var
   IsHideAfterInsert: boolean;
 
 const
-  AppVersion = '1.2.0';
+  AppVersion = '1.2.1';
   AppName = 'French_Assist';
   AppDesc = 'программа для вставки французских символов';
   UpdatePath = 'http://hb.perm.ru/french/newversioncheck.php';

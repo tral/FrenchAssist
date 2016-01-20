@@ -82,13 +82,12 @@ begin
   Reg.RootKey:=HKEY_CURRENT_USER;
   Reg.OpenKey('\Software\'+Form1.GetAppName,True);
 
-  {if (length(Reg.ReadString('WindowColor')) > 0)
-  then ButtonColor1.SymbolColor:=StrToInt(Reg.ReadString('WindowColor'))
+  if (length(Reg.ReadString('WindowColor')) > 0)
+  then begin end
   else
   begin
     Reg.WriteString('WindowColor', IntToStr(15780518));
-    ButtonColor1.SymbolColor := 15780518;
-  end;   }
+  end;
 
     if (length(Reg.ReadString('FrmHideToggle')) > 0)
   then
